@@ -1,34 +1,76 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Rutve</title>
-  <style>
-    * {
-      background-color: #7B0D1E;
-      color: #F8E5EE;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      font-style: italic;
-    }
-    h1 {
-      font-size: 3em;
-    }
-    div {
-      display: flex;
-      width: 100vw;
-      height: 100vh;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-  <div>
-      <h1>RUTVE</h1>
-      <span>COMING SOON</span>
-  </div>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rutve</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="libs/normalize.css/normalize.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="libs/modernizr/modernizr.js"></script>
+    </head>
+    <body>
+        <div id="fade" style="display: none;">
+            <canvas id="bgcanvas"></canvas>
+
+            <div class="wrapper">
+                <div class="left">
+                    <h1></h1>
+                </div>
+                <div class="right">
+                    <h1>RUTVE – COMING SOON</h1>
+                    <!-- <p>I'm a <a alt="Mehul Patel on Github" href="https://github.com/Mayho">software engineer</a> based in Atlanta. I specialize in building elegant user interfaces and scalable apps for early stage startups to fortune 500 companies.<br>For freelance inquiries, <a href="mailto:mehul8@gmail.com">email</a> or <a href="twitter.com/itsmayho">tweet</a> me.<p> -->
+                    <!-- <p>
+                        I've led multiple front-end teams in San Francisco – including some from startup incubators
+                        like <a href="http://www.ycombinator.com/">YC</a> and <a href="https://500.co/">500 Startups</a>.<br />
+                        Now I'm based in Atlanta consulting for companies – from early stage startups to Fortune 500 companies.
+                    </p> -->
+
+                    <!-- <ul class="social">
+                      <li>
+                          <a alt="Mehul Patel on Twitter" href="https://twitter.com/itsmayho">
+                              <i class="icon-twitter"></i>
+                          </a>
+                      </li>
+                      <li>
+                          <a alt="Mehul Patel on Github" href="http://github.com/Mayho">
+                              <i class="icon-github"></i>
+                          </a>
+                      </li>
+                      <li>
+                          <a alt="Mehul Patel on LinkedIn" href="http://www.linkedin.com/in/itsmayho/">
+                              <i class="icon-linkedin"></i>
+                          </a>
+                      </li>
+                    </ul> -->
+                </div>
+            </div>
+
+            <div class="mountains">
+                <div class="range"></div>
+                <div class="base"></div>
+            </div>
+
+            <footer>
+                <div class="contents">
+                    <span>Source code for this landing page is available on my <a alt="Mehul Patel on Github" href="http://github.com/Mayho">GitHub</a>.</span>
+                    <span>&copy; 2019 <a href="http://mehuljpatel.com">Mehul Patel</a>. Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons</a>.</span>
+                </div>
+            </footer>
+
+        </div>
+
+        <script src="libs/jquery/dist/jquery.js"></script>
+        <script src="libs/Processing.js/processing.min.js"></script>
+        <script src="scripts/jprocessingjs-0.9.min.js"></script>
+
+        <script src="scripts/main.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#fade').fadeIn(1200);
+                setTimeout(function() {
+                  new Processing(canvas, sketchProc)
+                }, 1);
+            });
+        </script>
 </body>
 </html>
