@@ -1,0 +1,14 @@
+{
+  "name": "rutve",
+  "version": "1.0.0",
+  "description": "rutve",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "mehul",
+  "license": "none",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
